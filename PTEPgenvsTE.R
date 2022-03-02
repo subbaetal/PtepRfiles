@@ -29,5 +29,7 @@ axtrack <- GenomeAxisTrack()
 
 # plot tracks! yields all TE of one genome assembly ID (ugh) on Ptep genome
 plotTracks(list(grtrack, strack, axtrack), from = 0, to = 16533)
+# looking further into why my grtrack only yielded 46 TEs I found the error "The track chromosomes in 'trackList' differ. Setting all tracks to chromosome 'NW_018367568.1'". 
+# NW_018367568.1 is the first assembly scaffold ID out of the 72 IDs that come from hays_small.bed. I double checked with tinyhaysbed.py if NW_018367568.1 had 46 elements and it did.
 # end goal is to have ALL TEs show up on one track so they can be plotted against genome and patterns can be found.
 # also wondering if assembly IDs/different colors would be beneficial to have on plot of all TEs on genome. Will figure out once we get there :^)
